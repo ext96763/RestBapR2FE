@@ -1,6 +1,7 @@
 package eu.profinit.opendata.service;
 
 import eu.profinit.opendata.model.Record;
+import eu.profinit.opendata.model.Retrieval;
 import org.springframework.stereotype.Component;
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -25,4 +26,7 @@ public interface OpenDataAPI {
 
     @GET("/tenders/search")
     Call<List<Record>> getRecordsByTenders(@Query("name") String name, @Query("ico") String ico, @Query("dateFrom") String dateFrom, @Query("dateTo") String dateTo, @Query("volumeFrom") Double volumeFrom, @Query("volumeTo") Double volumeTo);
+
+    @GET("/lastUpdate")
+    Call<List<Retrieval>> findLastUpdatedDate();
 }

@@ -2,24 +2,24 @@ package eu.profinit.opendata.controller;
 
 
 import eu.profinit.opendata.model.Record;
+import eu.profinit.opendata.model.Retrieval;
 import eu.profinit.opendata.retrofitconfiguration.RetrofitConfiguration;
 import eu.profinit.opendata.service.OpenDataAPI;
+import eu.profinit.opendata.utils.Links;
 import okhttp3.OkHttpClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
-import retrofit2.Call;
 import retrofit2.Response;
+import eu.profinit.opendata.utils.WebUtils;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.jsp.PageContext;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.lang.reflect.Parameter;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -35,6 +35,12 @@ public class MainController extends HttpServlet{
 
     @Autowired
     RetrofitConfiguration retrofitConfiguration;
+
+    @Autowired
+    WebUtils webUtils;
+
+    @Autowired
+    Links links;
 
 
     public MainController(OpenDataAPI openDataAPI){this.openDataAPI = openDataAPI;}
@@ -53,7 +59,7 @@ public class MainController extends HttpServlet{
         return "index";
     }
 
-    @RequestMapping(value = "/tenders/search", name = "indexSearchName")
+    @RequestMapping(value = "/tenders/search", name = "tenders")
     public String getRecordsByTenders(HttpServletRequest request) throws IOException{
         Double price_from = null;
         Double price_to = null;
@@ -71,8 +77,8 @@ public class MainController extends HttpServlet{
         }
         return "tenders";
     }
-    @RequestMapping(value = "/tenders/search/tenderList", name = "indexSearchName")
-    public String showRecordsByTenders(HttpServletRequest request) throws IOException{
+    @RequestMapping(value = "/tenders/search/tendersList", name = "tendersList")
+    public String showRecordsByTenders(HttpServletRequest request, HttpServletResponse response) throws IOException{
         Double price_from = null;
         Double price_to = null;
         String publication_date_from = null;
@@ -99,19 +105,16 @@ public class MainController extends HttpServlet{
                 price_to = Double.valueOf(request.getParameter("price_to"));
             }
 
-//            Double price_from = Double.valueOf(request.getParameter("price_from"));
-//            Double price_to = Double.valueOf(request.getParameter("price_from"));
-//            String publication_date_from = request.getParameter("publication_date_from");
-//            String publication_date_to = request.getParameter("publication_date_to");
-
-            Response<List<Record>> response = service.getRecordsByTenders(tenderName,tenderIco, publication_date_from, publication_date_to, price_from, price_to).execute();
-            request.setAttribute("records", response.body());
+            Response<List<Record>> res = service.getRecordsByTenders(tenderName,tenderIco, publication_date_from, publication_date_to, price_from, price_to).execute();
+//            Map<String, String> map = new HashMap<String, String>();
+//            map = links.getHeadersInfo(res);
+            request.setAttribute("records", res.body());
             return "tendersList";
         }
         return "tendersList";
     }
 
-    @RequestMapping(value = "/buyers/search", name = "indexSearchName")
+    @RequestMapping(value = "/buyers/search", name = "buyers")
     public String getRecordsByBuyers(HttpServletRequest request) throws IOException{
 
         OkHttpClient newClient = retrofitConfiguration.okHttpClient();
@@ -122,6 +125,22 @@ public class MainController extends HttpServlet{
             Response<List<Record>> response = service.getRecordsByCustomers(buyerIco, buyerName).execute();
             request.setAttribute("records", response.body());
             return "buyers";
+        }
+        return "buyers";
+    }
+    @RequestMapping(value = "/buyers/search/buyersList", name = "buyersList")
+    public String showRecordsByBuyers(HttpServletRequest request, HttpServletResponse response) throws IOException{
+       OkHttpClient newClient = retrofitConfiguration.okHttpClient();
+
+        OpenDataAPI service = retrofitConfiguration.retrofit(newClient).create(OpenDataAPI.class);
+        if(request.getParameter("tender_name") != null || request.getParameter("tender_ico") != null || request.getParameter("price_from") != null || request.getParameter("price_to") != null || request.getParameter("publication_date_from") != null || request.getParameter("publication_date_to") != null) {
+            String tenderName = request.getParameter("tender_name");
+            String tenderIco = request.getParameter("tender_ico");
+            Response<List<Record>> res = service.getRecordsByCustomers(tenderIco, tenderName).execute();
+//            Map<String, String> map = new HashMap<String, String>();
+//            map = links.getHeadersInfo(res);
+            request.setAttribute("records", res.body());
+            return "buyersList";
         }
         return "buyers";
     }
@@ -139,6 +158,51 @@ public class MainController extends HttpServlet{
             return "suppliers";
         }
         return "suppliers";
+    }
+
+    @RequestMapping(value = "/suppliers/search/suppliersList")
+    public String showRecordsBySuppliers(HttpServletRequest request, HttpServletResponse response) throws IOException{
+        OkHttpClient newClient = retrofitConfiguration.okHttpClient();
+
+        OpenDataAPI service = retrofitConfiguration.retrofit(newClient).create(OpenDataAPI.class);
+        if(request.getParameter("tender_name") != null || request.getParameter("tender_ico") != null || request.getParameter("price_from") != null || request.getParameter("price_to") != null || request.getParameter("publication_date_from") != null || request.getParameter("publication_date_to") != null) {
+            String tenderName = request.getParameter("tender_name");
+            String tenderIco = request.getParameter("tender_ico");
+            Response<List<Record>> res = service.getRecordsBySuppliers(tenderIco, tenderName).execute();
+//            Map<String, String> map = new HashMap<String, String>();
+//            map = links.getHeadersInfo(res);
+            request.setAttribute("records", res.body());
+            return "suppliersList";
+        }
+        return "suppliers";
+    }
+
+//    @RequestMapping(value = "/data", name = "lastUpdatedDate")
+//    public String findLastUpdatedDate(HttpServletRequest request) throws IOException{
+//
+//        OkHttpClient newClient = retrofitConfiguration.okHttpClient();
+//        OpenDataAPI service = retrofitConfiguration.retrofit(newClient).create(OpenDataAPI.class);
+//        Response<List<Retrieval>> response = service.findLastUpdatedDate().execute();
+//        request.setAttribute("lastDate", response.body());
+//        return "date";
+//    }
+
+    @RequestMapping(value = "/data", name = "lastUpdatedDate")
+    public String findLastUpdatedDate(HttpServletRequest request) throws IOException{
+
+        return "date";
+    }
+
+    @RequestMapping(value = "/api", name = "lastUpdatedDate")
+    public String adiDocumentation(HttpServletRequest request) throws IOException{
+
+        return "api";
+    }
+
+    @RequestMapping(value = "/about_project", name = "lastUpdatedDate")
+    public String aboutProject(HttpServletRequest request) throws IOException{
+
+        return "about_project";
     }
 
 }

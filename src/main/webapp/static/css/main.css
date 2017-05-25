@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+h1 {padding-top: 20px;}
+ul { text-align: center; margin:auto; }
+
+.blue { color:#337ab7; }
+
+body { font-size: 15px; line-height: 1.6; color: #333; background: black; text-align: center; border:0; margin:0; padding:0; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif }
+#container { width:100% }
+#top { background-color: #1a1917 }
+#main {  min-height: 500px; padding: 50px; padding-top: 100px; background-color: #31302f; width:100%}
+/*#main { background: grey url("../img/og-image-profinit.jpg") center no-repeat; }*/
+#search_anchors { margin-top: 100px; }
+#search_anchors .well { background-color: black; border:0;  filter: alpha(opacity=80); opacity: 0.8; border-radius: 60px;}
+#search_anchors a, #search_anchors h3, #search_anchors span { filter: alpha(opacity=100); opacity: 1.0; }
+#search_anchors h3 { color:#337ab7; }
+#footer { text-align: center; margin:auto; padding: 15px; }
+#footer ul li { list-style: none; float: left; margin-left: 20%; }
+
+#tenders .well, #tenders legend { background: none; border:0; }
+#tenders label { color: #337ab7;  }
+#tenders input { width: 500px;; }
+#tenders .blue { clear:both; display: block; }
+#tenders form, #tenders fieldset { text-align:center; margin:auto; color: rgba(27,27,65,0.93)}
+
+.list table { margin:20px 0; border-spacing: 10px; border-collapse:separate;}
+.list td, .list tr { margin:5px; } 
+.list .line-heading { height:40px; vertical-align:bottom; font-weight:800;}
+
+#tenders legend { color:#337ab7; }
+#mainDate table {color:#337ab7;}
+
+legend {
+    color: #337ab7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

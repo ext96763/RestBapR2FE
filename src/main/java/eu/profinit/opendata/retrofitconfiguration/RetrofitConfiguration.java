@@ -51,8 +51,8 @@ public class RetrofitConfiguration {
                                 return response;
                             }
                         })
-                .readTimeout(10, TimeUnit.SECONDS)
-                .connectTimeout(10,TimeUnit.SECONDS)
+                .readTimeout(15, TimeUnit.SECONDS)
+                .connectTimeout(15,TimeUnit.SECONDS)
                 .build();
         return okClient;
     }

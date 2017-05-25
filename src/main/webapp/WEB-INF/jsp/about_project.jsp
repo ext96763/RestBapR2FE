@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE HTML>
@@ -54,61 +55,52 @@
             </ul>
         </div>
     </div>
+    <div id="mainDate">
+        <div class = "list">
 
+            <fieldset >
+                <legend>
+                    <c:out value=" Tento projekt je ve stavu počátečního vývoje. Celý FE bude předělán do mnohem smysluplnější podoby. Stránky slouží pouze pro příklad.
 
-    <div id="main">
-
-        <div class="search_form row">
-            <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
-                <form class="form-horizontal" action="/tenders/search/tendersList" method="post">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="tender_name" id="tender_name" value="" required placeholder="jméno zakázky"/>
-                        <span class="input-group-btn">
-                                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search icon-white"></span></button>
-                                    </span>
-
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div id="search_anchors">
-            <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <div class="well">
-                        <h3>Zakázky</h3>
-                        <a class="btn btn-primary btn-large" href="/tenders/search/" ><span class="glyphicon glyphicon-search"></span>
-                            Hledat</a>
-
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <div class="well">
-                        <h3>Zadavatelé</h3>
-                        <a class="btn btn-primary btn-large" href="/buyers/search/" ><span class="glyphicon glyphicon-search"></span>
-                            Hledat</a>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <div class="well">
-                        <h3>Dodavatelé</h3>
-                        <a class="btn btn-primary btn-large" href="/suppliers/search/" ><span class="glyphicon glyphicon-search"></span>
-                            Hledat</a>
-                    </div>
-                </div>
-            </div>
+Myšlenkou, která stojí za tímto projektem, je sdílení veřejných zakázek pomocí Rest API. To je to, co tento web odlišuje od ostatních webů, které poskytují stejné informace. Na stránce v sekci „API“ lze najit dokumentaci k tomu, jak API používat.
+"/>
+                </legend>
+            </fieldset>
         </div>
     </div>
-    <%--<div id="footer">--%>
+    <%--<fieldset >--%>
+        <%--<legend>--%>
+            <%--<c:out value="welcome<to>Jsp" />--%>
+        <%--</legend>--%>
+    <%--</fieldset>--%>
+    <%--<div id="main">--%>
+        <%--<div class = "list table-striped table-bordered table-responsive">--%>
 
-        <%--TODO links--%>
-        <%--<ul>--%>
-            <%--<li><a href="/api/">API</a></li>--%>
-            <%--<li><a href="/data/">Data</a></li>--%>
-            <%--<li><a href="/about_project/">O projektu</a></li>--%>
-        <%--</ul>--%>
+            <%--<table class ="blue">--%>
+                <%--<tbody>--%>
+                <%--<c:forEach items="${lastDate}" var="retrieval">--%>
+                    <%--<tr class = "line-heading">--%>
+                        <%--<td>date</td>--%>
+                        <%--<td>retrievalId</td>--%>
+                        <%--<td>failureReason</td>--%>
+                        <%--<td>numBadRecords</td>--%>
+                        <%--<td>numRecordsInserted</td>--%>
+                        <%--<td>success</td>--%>
+
+                    <%--</tr>--%>
+                    <%--<tr>--%>
+                        <%--<td>${retrieval.date}</td>--%>
+                        <%--<td>${retrieval.retrievalId}</td>--%>
+                        <%--<td>${retrieval.failureReason}</td>--%>
+                        <%--<td>${retrieval.numBadRecords}</td>--%>
+                        <%--<td>${retrieval.numRecordsInserted}</td>--%>
+                        <%--<td>${retrieval.success}</td>--%>
+
+                    <%--</tr>--%>
+                <%--</c:forEach>--%>
+                <%--</tbody>--%>
+            <%--</table>--%>
+        <%--</div>--%>
     <%--</div>--%>
     <div id="footer">
         <ul>

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE HTML>
@@ -58,49 +59,7 @@
 
     <div id="main">
 
-        <div class="search_form row">
-            <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
-                <form class="form-horizontal" action="/tenders/search/tendersList" method="post">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="tender_name" id="tender_name" value="" required placeholder="jméno zakázky"/>
-                        <span class="input-group-btn">
-                                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search icon-white"></span></button>
-                                    </span>
-
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div id="search_anchors">
-            <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <div class="well">
-                        <h3>Zakázky</h3>
-                        <a class="btn btn-primary btn-large" href="/tenders/search/" ><span class="glyphicon glyphicon-search"></span>
-                            Hledat</a>
-
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <div class="well">
-                        <h3>Zadavatelé</h3>
-                        <a class="btn btn-primary btn-large" href="/buyers/search/" ><span class="glyphicon glyphicon-search"></span>
-                            Hledat</a>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <div class="well">
-                        <h3>Dodavatelé</h3>
-                        <a class="btn btn-primary btn-large" href="/suppliers/search/" ><span class="glyphicon glyphicon-search"></span>
-                            Hledat</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        <a href='<c:url value="http://localhost:8080/swagger-ui.html#/main-controller" />'>Dokumentace API</a>
     <%--<div id="footer">--%>
 
         <%--TODO links--%>

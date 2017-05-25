@@ -115,32 +115,24 @@
                     <td>${record.recordType}</td>
                     <td>${record.authorityRole}</td>
                     <td>${record.retrieval}</td>
-
-                    <%--<c:forEach items="${record.authority}" var="aut">--%>
-                        <%--<tr class = "line-heading">--%>
-                        <%--<td>dic</td>--%>
-                        <%--<td>ico</td>--%>
-                        <%--<td>isPublic</td>--%>
-                        <%--<td>name</td>--%>
-                        <%--<td>entityId</td>--%>
-                        <%--<td>entityType</td>--%>
-                        <%--</tr>--%>
-                        <%--<tr>--%>
-                        <%--<td>${aut.dic}</td>--%>
-                        <%--<td>${aut.ico}</td>--%>
-                        <%--<td>${aut.isPublic}</td>--%>
-                        <%--<td>${aut.name}</td>--%>
-                        <%--<td>${aut.entityId}</td>--%>
-                        <%--<td>${aut.entityType}</td>--%>
-                        <%--</tr>--%>
-                    <%--</c:forEach>--%>
-
                     <td>${record.authority}</td>
                     <td>${record.partner}</td>
                     <td>${record.parentRecord}</td>
                     <td>${record.childRecords}</td>
                     <td>${record.periodicity}</td>
                     <td>${record.unresolvedRelationships}</td>
+
+
+
+                    <%--<>?td>sdsgsdgsdgsloupec7</td>--%>
+                    <%--<tdforech ${record.authority}var = "autority">--%>
+                        <%--<td>--%>
+                        <%--sloupec8</tdforech>--%>
+                    <%--<td>sloupec9</td>--%>
+                    <%--<td>slousdgsdgsdgsdgspec10</td>--%>
+                    <%--<td>sloupe11</td>--%>
+                    <%--<td>sloupec12</td>--%>
+
                 </tr>
                 </c:forEach>
 
@@ -158,8 +150,6 @@
         </ul>
     </div>
 </div>
-
-<%--TODO Links previous, next. --%>
 <%--<ul class="breadcrumb"><li><a href = ${linkback}>prev</a></li><li><a href = ${linkforward}>next</a></li></ul>--%>
 </body>
 </html>
