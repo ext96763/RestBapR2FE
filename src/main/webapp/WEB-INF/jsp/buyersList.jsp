@@ -70,7 +70,7 @@
             <table class ="blue">
                 <tbody>
 
-                <c:forEach items="${records}" var="record">
+
                 <tr class = "line-heading">
                     <td>amountCzk</td>
                     <td>authorityIdentifier</td>
@@ -95,8 +95,8 @@
                     <td>childRecords</td>
                     <td>periodicity</td>
                     <td>unresolvedRelationships</td>
-
                 </tr>
+                <c:forEach items="${records}" var="record">
                 <tr>
                     <td>${record.amountCzk}</td>
                     <td>${record.authorityIdentifier}</td>

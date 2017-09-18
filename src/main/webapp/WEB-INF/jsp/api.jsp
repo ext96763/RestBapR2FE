@@ -59,7 +59,7 @@
 
     <div id="main">
 
-        <a href='<c:url value="http://localhost:8080/swagger-ui.html#/main-controller" />'>Dokumentace API</a>
+        <a href='<c:url value="http://localhost:8081/swagger-ui.html#/main-controller" />'>Dokumentace API</a>
     <%--<div id="footer">--%>
 
         <%--TODO links--%>
@@ -76,6 +76,7 @@
             <li><a href="/about_project/">O projektu</a></li>
         </ul>
     </div>
+</div>
 </div>
 </body>
 </html>

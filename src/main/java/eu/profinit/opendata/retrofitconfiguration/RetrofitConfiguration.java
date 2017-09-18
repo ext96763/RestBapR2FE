@@ -62,7 +62,7 @@ public class RetrofitConfiguration {
         Gson gSon=  new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
         return new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create(gSon))
-                .baseUrl("http://localhost:8080/")
+                .baseUrl("http://localhost:8081/")
                 .client(client)
                 .build();
     }

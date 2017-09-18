@@ -73,13 +73,13 @@
                     <legend>Parametry dodavatelé</legend>
                     <div class="form-group">
 
-                        <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label" for="tender_name">
+                        <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label" for="supplier_name">
                             Jméno
                         </label>
                         <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
 
                             <div class="input-group">
-                                <input type="text" class="form-control" name="tender_name" id="tender_name" placeholder="Část jmena zakázky" value=""/>
+                                <input type="text" class="form-control" name="supplier_name" id="supplier_name" placeholder="Část jmena zakázky" value=""/>
                                 <span class="input-group-btn">
     <!--<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Název nebo část názvu zakázky. Nerozlišuje velikost písmen. " data-original-title="Jméno" data-trigger="focus" title="" data-placement="right"><span class="glyphicon glyphicon-question-sign"></span></button>-->
     <a href ="#" title = "Název nebo část názvu zakázky. Nerozlišuje velikost písmen. "><span class="glyphicon glyphicon-question-sign"></span></a>
@@ -89,12 +89,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label" for="tender_ico">
+                        <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label" for="supplier_ico">
                             IČO
                         </label>
                         <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                             <div class="input-group">
-                                <input type="text" class="form-control" name="tender_ico" id="tender_ico" placeholder="IČO" value=""/>
+                                <input type="text" class="form-control" name="supplier_ico" id="supplier_ico" placeholder="IČO" value=""/>
                                 <span class="input-group-btn">
 
 </span>

@@ -60,7 +60,8 @@
 
             <fieldset >
                 <legend>
-                    <c:out value=" Datum poslední úspěšné obnovy databáze: 2016-02-02 " />
+                    <c:out value=" Datum poslední úspěšné obnovy databáze: " />
+                    <tr>${retrieval}</tr>
                 </legend>
             </fieldset>
         </div>

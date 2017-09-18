@@ -14,7 +14,7 @@ public class Retrieval {
     /** The time the retrieval was started */
       
     @JsonProperty
-    private Timestamp date;
+    private Long date;
 
     /** The reason for a total failure, if there was one. */
        
@@ -50,11 +50,11 @@ public class Retrieval {
        
     private Collection<Record> records;
 
-    public Timestamp getDate() {
+    public Long getDate() {
         return date;
     }
 
-    public void setDate(Timestamp date) {
+    public void setDate(Long date) {
         this.date = date;
     }
 
