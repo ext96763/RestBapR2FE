@@ -71,49 +71,49 @@
                 <tbody>
 
                 <tr class = "line-heading">
-                    <td>amountCzk</td>
-                    <td>authorityIdentifier</td>
-                    <td>currency</td>
-                    <td>dateCreated</td>
-                    <td>dateOfExpiry</td>
-                    <td>dateOfPayment</td>
-                    <td>dueDate</td>
-                    <td>inEffect</td>
-                    <td>masterId</td>
-                    <td>originalCurrencyAmount</td>
-                    <td>budgetCategory</td>
+                    <%--<td>amountCzk</td>--%>
+                    <%--<td>authorityIdentifier</td>--%>
+                    <%--<td>currency</td>--%>
+                    <%--<td>dateCreated</td>--%>
+                    <%--<td>dateOfExpiry</td>--%>
+                    <%--<td>dateOfPayment</td>--%>
+                    <%--<td>dueDate</td>--%>
+                    <%--<td>inEffect</td>--%>
+                    <%--<td>masterId</td>--%>
+                    <%--<td>originalCurrencyAmount</td>--%>
+                    <%--<td>budgetCategory</td>--%>
                     <td>subject</td>
-                    <td>variableSymbol</td>
+                    <%--<td>variableSymbol</td>--%>
                     <td>recordId</td>
-                    <td>recordType</td>
-                    <td>authorityRole</td>
-                    <td>retrieval</td>
-                    <td>authority</td>
-                    <td>partner</td>
-                    <td>parentRecord</td>
-                    <td>childRecords</td>
-                    <td>periodicity</td>
-                    <td>unresolvedRelationships</td>
+                    <%--<td>recordType</td>--%>
+                    <%--<td>authorityRole</td>--%>
+                    <%--<td>retrieval</td>--%>
+                    <%--<td>authority</td>--%>
+                    <%--<td>partner</td>--%>
+                    <%--<td>parentRecord</td>--%>
+                    <%--<td>childRecords</td>--%>
+                    <%--<td>periodicity</td>--%>
+                    <%--<td>unresolvedRelationships</td>--%>
                 </tr>
                 <c:forEach items="${records}" var="record">
                 <tr>
-                    <td>${record.amountCzk}</td>
-                    <td>${record.authorityIdentifier}</td>
-                    <td>${record.currency}</td>
-                    <td>${record.dateCreated}</td>
-                    <td>${record.dateOfExpiry}</td>
-                    <td>${record.dateOfPayment}</td>
-                    <td>${record.dueDate}</td>
-                    <td>${record.inEffect}</td>
-                    <td>${record.masterId}</td>
-                    <td>${record.originalCurrencyAmount}</td>
-                    <td>${record.budgetCategory}</td>
+                    <%--<td>${record.amountCzk}</td>--%>
+                    <%--<td>${record.authorityIdentifier}</td>--%>
+                    <%--<td>${record.currency}</td>--%>
+                    <%--<td>${record.dateCreated}</td>--%>
+                    <%--<td>${record.dateOfExpiry}</td>--%>
+                    <%--<td>${record.dateOfPayment}</td>--%>
+                    <%--<td>${record.dueDate}</td>--%>
+                    <%--<td>${record.inEffect}</td>--%>
+                    <%--<td>${record.masterId}</td>--%>
+                    <%--<td>${record.originalCurrencyAmount}</td>--%>
+                    <%--<td>${record.budgetCategory}</td>--%>
                     <td>${record.subject}</td>
-                    <td>${record.variableSymbol}</td>
+                    <%--<td>${record.variableSymbol}</td>--%>
                     <td>${record.recordId}</td>
-                    <td>${record.recordType}</td>
-                    <td>${record.authorityRole}</td>
-                    <td>${record.retrieval}</td>
+                    <%--<td>${record.recordType}</td>--%>
+                    <%--<td>${record.authorityRole}</td>--%>
+                    <%--<td>${record.retrieval}</td>--%>
 
                     <%--<c:forEach items="${record.authority}" var="aut">--%>
                         <%--<tr class = "line-heading">--%>

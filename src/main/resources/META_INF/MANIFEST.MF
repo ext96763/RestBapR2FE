@@ -1,1 +1,1 @@
-Main-Class: eu.profinit.opendata.RestBapR2Fe
+Main-Class: eu.profinit.opendata.OpenDataFeApplication

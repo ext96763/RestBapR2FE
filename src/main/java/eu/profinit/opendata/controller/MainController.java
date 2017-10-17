@@ -13,7 +13,6 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import retrofit2.Response;
 import eu.profinit.opendata.utils.WebUtils;
-
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -180,16 +179,6 @@ public class MainController extends HttpServlet {
         }
         return "suppliers";
     }
-
-//    @RequestMapping(value = "/data", name = "lastUpdatedDate")
-//    public String findLastUpdatedDate(HttpServletRequest request) throws IOException{
-//
-//        OkHttpClient newClient = retrofitConfiguration.okHttpClient();
-//        OpenDataAPI service = retrofitConfiguration.retrofit(newClient).create(OpenDataAPI.class);
-//        Response<List<Retrieval>> response = service.findLastUpdatedDate().execute();
-//        request.setAttribute("lastDate", response.body());
-//        return "date";
-//    }
 
     @RequestMapping(value = "/data", name = "lastUpdatedDate")
     public String findLastUpdatedDate(HttpServletRequest request) throws IOException {

@@ -1,6 +1,6 @@
 package eu.profinit.opendata.config;
 
-import eu.profinit.opendata.RestBapR2Fe;
+import eu.profinit.opendata.OpenDataFeApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
@@ -10,6 +10,6 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 public class WebInitializer extends SpringBootServletInitializer {
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(RestBapR2Fe.class);
+        return application.sources(OpenDataFeApplication.class);
     }
 }

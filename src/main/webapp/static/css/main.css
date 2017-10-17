@@ -25,7 +25,7 @@ body { font-size: 15px; line-height: 1.6; color: #333; background: black; text-a
 #tenders form, #tenders fieldset { text-align:center; margin:auto; color: rgba(27,27,65,0.93)}
 
 .list table { margin:20px 0; border-spacing: 10px; border-collapse:separate;}
-.list td, .list tr { margin:5px; } 
+.list td, .list tr { margin:5px; border: 1px solid black; width: 100px;}
 .list .line-heading { height:40px; vertical-align:bottom; font-weight:800;}
 
 #tenders legend { color:#337ab7; }

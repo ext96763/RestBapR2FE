@@ -1,7 +1,6 @@
 package eu.profinit.opendata;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
@@ -11,9 +10,9 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan()
-public class RestBapR2Fe {
+public class OpenDataFeApplication {
 
     public static void main(String[] args){
-        SpringApplication.run(RestBapR2Fe.class, args);
+        SpringApplication.run(OpenDataFeApplication.class, args);
     }
 }

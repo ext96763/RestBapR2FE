@@ -15,18 +15,18 @@ import java.util.List;
 @Component
 public interface OpenDataAPI {
 
-    @GET("/search")
+    @GET("api/search")
     Call<List<Record>> getRecordByName(@Query(value = "name", encoded = true) String name);
 
-    @GET("/suppliers/search")
-    Call<List<Record>> getRecordsBySuppliers(@Query("ico") String ico, @Query("name") String name);
+    @GET("api/suppliers/search")
+    Call<List<Record>> getRecordsBySuppliers(@Query("name") String name, @Query("ico") String ico);
 
-    @GET("/buyers/search")
+    @GET("api/buyers/search")
     Call<List<Record>> getRecordsByCustomers(@Query("ico") String ico, @Query("name") String name);
 
-    @GET("/tenders/search")
+    @GET("api/tenders/search")
     Call<List<Record>> getRecordsByTenders(@Query("name") String name, @Query("ico") String ico, @Query("dateFrom") String dateFrom, @Query("dateTo") String dateTo, @Query("volumeFrom") Double volumeFrom, @Query("volumeTo") Double volumeTo);
 
-    @GET("/lastUpdate")
+    @GET("api/lastUpdate")
     Call<List<Retrieval>> findLastUpdatedDate();
 }
