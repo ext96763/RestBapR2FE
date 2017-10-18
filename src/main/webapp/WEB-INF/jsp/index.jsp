@@ -3,6 +3,17 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108366622-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-108366622-1');
+    </script>
+    <!-- End Google Analytics -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="keywords" content=""/>
     <meta name="language" content="Czech"/>
@@ -10,17 +21,7 @@
     <meta name="description" content="Alternativní informační systém o veřejných zakázkách v ČR"/>
     <meta charset="UTF-8">
     <title>Opendata.cz - Alternativní informační systém o veřejných zakázkách v ČR</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-
-    <!-- jquery -->
-    <!-- <script type="text/javascript" src="static/js/jquery.min.js"></script>
-     <script type="text/javascript" src="static/js/jquery-ui.min.js"></script>
-     <script type="text/javascript" src="static/js/jquery.multifile.min.js"></script>
-     <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
-     <script type="text/javascript" src="static/js/application.js"></script>-->
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link type="text/css" href="/static/css/jquery-ui.min.css" rel="stylesheet" />
     <link type="text/css" href="/static/css/jquery-ui.theme.min.css" rel="stylesheet" />
